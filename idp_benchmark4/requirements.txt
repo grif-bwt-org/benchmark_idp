@@ -1,0 +1,7 @@
+colorlog
+Pillow
+anthropic
+json-repair
+PyMuPDF
+openai
+google-generativeai

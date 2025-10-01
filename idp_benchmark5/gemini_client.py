@@ -4,7 +4,7 @@ from PIL import Image
 
 from langchain_core.output_parsers import PydanticOutputParser
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
-from services.prompts.prompts import INVOICE_PROMPT_INSTRUCTIONS
+from prompts import INVOICE_PROMPT_INSTRUCTIONS
 from utils.logger import default_logger
 from utils.validator import ValidatedInvoice
 

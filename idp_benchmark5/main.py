@@ -15,7 +15,7 @@ from gemini_client import GeminiClient
 from document_processor import DocumentProcessor
 from recommender_claude import Recommender
 from exporter import ResultExporter 
-from logger import default_logger
+from utils.logger import default_logger
 
 logger = default_logger(__name__)
 
@@ -26,11 +26,6 @@ def _save_llm_candidates_for_analysis(
     output_dir: Path, 
     source_file_stem: str
 ):
-    """
-    Объединяет DataFrame'ы кандидатов для всех позиций в один
-    и сохраняет в CSV файл для анализа.
-    Теперь также включает результаты анализа от LLM.
-    """
     if not candidates_data:
         logger.warning(f"No LLM candidate data to save for {source_file_stem}.")
         return
